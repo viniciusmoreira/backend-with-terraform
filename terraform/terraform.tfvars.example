@@ -1,0 +1,26 @@
+# AWS Configuration
+aws_region  = "us-east-1"
+aws_profile = "your-aws-profile"
+
+# Project
+project_name = "alvorada-user-profile"
+environment  = "dev"
+
+# Secrets
+system_secret_value = "your-secret-value"
+db_password         = "your-secure-db-password"
+
+# VPC (optional - defaults work fine)
+# vpc_cidr           = "10.0.0.0/16"
+# availability_zones = ["us-east-1a", "us-east-1b"]
+
+# ECS (optional - defaults work fine for dev)
+# container_port = 3000
+# task_cpu       = 256
+# task_memory    = 512
+# desired_count  = 1
+
+# RDS (optional - defaults work fine for dev)
+# db_instance_class = "db.t3.micro"
+# db_name           = "userprofiles"
+# db_username       = "postgres"
