@@ -1,0 +1,19 @@
+aws_region     = "us-east-1"
+aws_profile    = "your-aws-profile"
+project_name   = "alvorada-user-profile"
+environment    = "dev"
+
+vpc_cidr           = "10.0.0.0/16"
+availability_zones = ["us-east-1a", "us-east-1b"]
+
+container_port = 3000
+task_cpu       = 256
+task_memory    = 512
+desired_count  = 1
+
+db_instance_class = "db.t3.micro"
+db_name           = "userprofiles"
+db_username       = "postgres"
+
+# Secrets (copy this file to terraform.tfvars and fill in)
+system_secret_value = "your-secret-value-here"
