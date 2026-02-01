@@ -1,8 +1,16 @@
-name: Deploy to ECS
+name: Deploy App
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'src/**'
+      - 'prisma/**'
+      - 'Dockerfile'
+      - 'docker-entrypoint.sh'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
 
 env:
   AWS_REGION: us-east-1

@@ -8,18 +8,21 @@ dist/
 .env.*.local
 
 # Terraform
-terraform/.terraform/
-terraform/*.tfstate
-terraform/*.tfstate.*
-terraform/terraform.tfvars
-terraform/.terraform.lock.hcl
-terraform/crash.log
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+crash.log
+tfplan
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+.claude/
 
 # OS
 .DS_Store
