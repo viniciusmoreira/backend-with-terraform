@@ -33,3 +33,21 @@ variable "db_username" {
   description = "Database username"
   type        = string
 }
+
+variable "multi_az" {
+  description = "Enable Multi-AZ deployment for RDS. Recommended for production."
+  type        = bool
+  default     = false
+}
+
+variable "skip_final_snapshot" {
+  description = "Skip final snapshot when destroying RDS instance. Set to false in production."
+  type        = bool
+  default     = true
+}
+
+variable "deletion_protection" {
+  description = "Enable deletion protection for RDS instance. Recommended for production."
+  type        = bool
+  default     = false
+}

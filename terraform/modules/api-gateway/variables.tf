@@ -27,3 +27,9 @@ variable "alb_dns_name" {
   description = "ALB DNS name"
   type        = string
 }
+
+variable "cors_allowed_origins" {
+  description = "List of allowed origins for CORS. Use specific origins in production."
+  type        = list(string)
+  default     = ["*"]
+}

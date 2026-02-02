@@ -13,7 +13,12 @@ output "target_group_arn" {
   value       = aws_lb_target_group.main.arn
 }
 
-output "listener_arn" {
+output "http_listener_arn" {
   description = "HTTP listener ARN"
   value       = aws_lb_listener.http.arn
+}
+
+output "https_listener_arn" {
+  description = "HTTPS listener ARN (null if HTTPS not enabled)"
+  value       = try(aws_lb_listener.https[0].arn, null)
 }

@@ -28,3 +28,15 @@ variable "container_port" {
   type        = number
   default     = 3000
 }
+
+variable "enable_https" {
+  description = "Enable HTTPS listener. Requires certificate_arn to be set."
+  type        = bool
+  default     = false
+}
+
+variable "certificate_arn" {
+  description = "ACM certificate ARN for HTTPS listener. Required when enable_https is true."
+  type        = string
+  default     = null
+}
