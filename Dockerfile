@@ -33,9 +33,9 @@ COPY --from=builder /app/node_modules/prisma ./node_modules/prisma
 COPY --from=builder /app/node_modules/@prisma/engines ./node_modules/@prisma/engines
 
 COPY --from=builder /app/dist ./dist
-COPY docker-entrypoint.sh ./
+COPY scripts/entrypoint.prod.sh ./entrypoint.sh
 
-RUN chown -R nodejs:nodejs /app && chmod +x docker-entrypoint.sh
+RUN chown -R nodejs:nodejs /app && chmod +x entrypoint.sh
 
 USER nodejs
 
@@ -44,4 +44,4 @@ EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost:3000/health || exit 1
 
-CMD ["./docker-entrypoint.sh"]
+CMD ["./entrypoint.sh"]

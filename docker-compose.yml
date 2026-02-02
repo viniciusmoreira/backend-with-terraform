@@ -5,15 +5,14 @@ services:
       dockerfile: Dockerfile
       target: builder
     container_name: userprofiles-api
-    command: npm run dev
+    entrypoint: /app/scripts/entrypoint.dev.sh
     env_file:
       - .env
-    environment:
-      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/userprofiles
     ports:
       - "3000:3000"
     volumes:
       - ./src:/app/src
+      - ./scripts:/app/scripts:ro
       - ~/.aws:/root/.aws:ro
     depends_on:
       postgres:
