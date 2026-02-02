@@ -15,5 +15,4 @@ db_instance_class = "db.t3.micro"
 db_name           = "userprofiles"
 db_username       = "postgres"
 
-# Secrets (copy this file to terraform.tfvars and fill in)
 system_secret_value = "your-secret-value-here"
