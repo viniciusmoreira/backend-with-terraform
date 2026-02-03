@@ -86,7 +86,7 @@ A production-ready user profile management API showcasing modern backend develop
 |  |  +----------------------------+  |    |  +----------------------------+  |      |
 |  |  |                            |  |    |  |                            |  |      |
 |  |  |  Application Load Balancer |  |    |  |  ECS Fargate               |  |      |
-|  |  |  (ALB)                     +-------->  |  (Node.js API)             |  |      |
+|  |  |  (ALB)                     +--------> |  (Node.js API)             |  |      |
 |  |  |                            |  |    |  |                            |  |      |
 |  |  +----------------------------+  |    |  +-------------+--------------+  |      |
 |  |                                  |    |                |                 |      |
